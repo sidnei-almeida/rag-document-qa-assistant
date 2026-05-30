@@ -1,0 +1,65 @@
+.app-shell {
+  display: grid;
+  grid-template-columns: var(--sidebar-width) minmax(0, 1fr) var(--right-panel-width);
+  height: 100vh;
+  max-height: 100vh;
+  overflow: hidden;
+  background: var(--color-bg-base);
+}
+
+.app-shell > * {
+  min-height: 0;
+}
+
+.app-shell__main {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+  background: var(--color-bg-main);
+  border-left: var(--border-card);
+  border-right: none;
+}
+
+.main-column {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+}
+
+@media (max-width: 1100px) {
+  .app-shell {
+    grid-template-columns: var(--sidebar-width) minmax(0, 1fr);
+  }
+
+  .right-panel {
+    display: none;
+  }
+}
+
+@media (max-width: 800px) {
+  .app-shell {
+    grid-template-columns: 72px minmax(0, 1fr);
+  }
+
+  .sidebar__brand-text,
+  .sidebar__new-chat span,
+  .sidebar__section-label,
+  .workspace-item__content,
+  .workspace-item__meta,
+  .document-item__meta,
+  .sidebar__new-workspace,
+  .upload-dropzone__title,
+  .upload-dropzone__subtitle,
+  .sidebar__profile-info,
+  .sidebar__help {
+    display: none;
+  }
+
+  .sidebar {
+    padding: 0.75rem 0.5rem;
+  }
+}

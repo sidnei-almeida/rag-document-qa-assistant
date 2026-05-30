@@ -1,0 +1,74 @@
+/**
+ * Editorial foundation — typography, interactive transitions, flat surfaces
+ */
+
+body {
+  font-weight: var(--font-weight-regular);
+  letter-spacing: -0.011em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong,
+b {
+  font-weight: var(--font-weight-medium);
+}
+
+button,
+[role='button'],
+a,
+input,
+select,
+textarea,
+.btn,
+.icon-btn,
+.workspace-item__main,
+.feedback-btn,
+.evidence-chip,
+.suggested-prompts__card,
+.sidebar__new-workspace,
+.sidebar__upload-btn,
+.sidebar__help,
+.chat-header__icon-btn,
+.message-composer__send,
+.intel-metrics,
+.intel-doc-card,
+.intel-source-row,
+.upload-dropzone,
+.dialog__close {
+  transition: var(--transition-interactive);
+}
+
+/* Flat cards — border only, no shadow */
+.sidebar,
+.app-shell__main,
+.chat-header,
+.intel-metrics,
+.intel-doc-card,
+.intel-source-row,
+.upload-dropzone,
+.dialog,
+.current-doc-card,
+.coming-soon,
+.badge,
+.evidence-chip,
+.citation-chip,
+.suggested-prompts__card {
+  box-shadow: none !important;
+}
+
+.intel-doc-card,
+.intel-source-row,
+.upload-dropzone,
+.dialog {
+  border: var(--border-card);
+}
+
+.badge,
+.citation-chip {
+  border-radius: var(--radius-xs);
+}

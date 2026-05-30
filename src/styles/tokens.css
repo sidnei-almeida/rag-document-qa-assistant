@@ -1,0 +1,203 @@
+/**
+ * DocMind — design tokens (dark only)
+ */
+
+:root {
+  color-scheme: dark;
+
+  --background: #0a0a0b;
+  --foreground: #ededef;
+  --sidebar: #0a0a0b;
+  --panel: #0a0a0b;
+  --card: #111113;
+  --card-foreground: #ededef;
+  --border: rgba(255, 255, 255, 0.06);
+  --border-strong: rgba(255, 255, 255, 0.1);
+  --muted: #18181b;
+  --muted-foreground: #8b8b93;
+  --primary: #8b7cf6;
+  --primary-foreground: #0a0a0b;
+  --primary-hover: #9d8ff8;
+  --accent: rgba(139, 124, 246, 0.1);
+  --accent-foreground: #a195ff;
+  --success: #4ade80;
+  --warning: #fbbf24;
+  --destructive: #f87171;
+  --success-bg: rgba(74, 222, 128, 0.08);
+  --warning-bg: rgba(251, 191, 36, 0.08);
+  --destructive-bg: rgba(248, 113, 113, 0.08);
+  
+  --color-bg-base: var(--background);
+  --color-bg-main: var(--panel);
+  --color-bg-surface: var(--sidebar);
+  --color-bg-card: var(--card);
+  --color-bg-elevated: #18181b;
+  --color-bg-overlay: #1f1f23;
+  --color-bg-input: #111113;
+  --color-user-bubble-bg: rgba(255, 255, 255, 0.06);
+  --color-user-bubble-border: transparent;
+  
+  --color-accent: var(--primary);
+  --color-accent-hover: var(--primary-hover);
+  --color-accent-subtle: var(--accent);
+  --color-accent-muted: #6b6b78;
+  --color-accent-glow: transparent;
+  
+  --color-text-primary: var(--foreground);
+  --color-text-secondary: #a1a1aa;
+  --color-text-muted: var(--muted-foreground);
+  
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+  --color-border-subtle: rgba(255, 255, 255, 0.06);
+  
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-danger: var(--destructive);
+  --color-success-bg: var(--success-bg);
+  --color-warning-bg: var(--warning-bg);
+  --color-danger-bg: var(--destructive-bg);
+  
+  --color-focus-ring: rgba(139, 124, 246, 0.25);
+  --color-focus-outline: var(--primary);
+  --color-scrollbar: rgba(255, 255, 255, 0.14);
+  --color-on-accent: var(--primary-foreground);
+  --color-disabled-opacity: 0.38;
+  
+  --color-topbar: transparent;
+  --color-composer: transparent;
+  --color-dialog-backdrop: rgba(0, 0, 0, 0.72);
+  
+  --composer-field-bg: var(--color-bg-elevated);
+  --composer-field-border: rgba(255, 255, 255, 0.08);
+  --composer-send-bg: #6b5cc9;
+  --composer-send-bg-hover: #7d6ed4;
+  --composer-send-fg: #ffffff;
+  
+  --shadow-sm: none;
+  --shadow-md: none;
+  --shadow-soft: none;
+  --shadow-primary: none;
+  
+  --avatar-bg: var(--color-bg-card);
+  --chat-avatar-ring: 1.5px solid rgba(255, 255, 255, 0.1);
+  --chat-user-avatar-bg: rgba(255, 255, 255, 0.06);
+  --chat-assistant-avatar-fallback-bg: #1e1e2e;
+  --chat-assistant-avatar-fallback-fg: rgba(255, 255, 255, 0.6);
+  --chat-assistant-name-color: rgba(255, 255, 255, 0.35);
+  --chat-assistant-text-color: rgba(255, 255, 255, 0.82);
+  --chat-evidence-label: rgba(255, 255, 255, 0.28);
+  --chat-evidence-chip-border: rgba(255, 255, 255, 0.1);
+  --chat-evidence-chip-text: rgba(255, 255, 255, 0.5);
+  --chat-feedback-icon: rgba(255, 255, 255, 0.25);
+  --chat-feedback-icon-hover: rgba(255, 255, 255, 0.45);
+  
+  --sidebar-border: rgba(255, 255, 255, 0.05);
+  --sidebar-header-divider: rgba(255, 255, 255, 0.04);
+  --sidebar-footer-divider: rgba(255, 255, 255, 0.04);
+  --sidebar-logo-mark: rgba(255, 255, 255, 0.4);
+  --sidebar-brand-name: rgba(255, 255, 255, 0.85);
+  --sidebar-section-label: rgba(255, 255, 255, 0.25);
+  --sidebar-upload-border: rgba(255, 255, 255, 0.07);
+  --sidebar-upload-fg: rgba(255, 255, 255, 0.45);
+  --sidebar-upload-hover-border: rgba(255, 255, 255, 0.14);
+  --sidebar-upload-hover-fg: rgba(255, 255, 255, 0.75);
+  --sidebar-workspace-hover-bg: rgba(255, 255, 255, 0.03);
+  --sidebar-workspace-active-bg: rgba(255, 255, 255, 0.04);
+  --sidebar-workspace-icon: rgba(255, 255, 255, 0.3);
+  --sidebar-workspace-name: rgba(255, 255, 255, 0.75);
+  --sidebar-workspace-meta: rgba(255, 255, 255, 0.3);
+  --sidebar-status-ready: #4ade80;
+  --sidebar-delete-fg: rgba(255, 255, 255, 0.3);
+  --sidebar-delete-hover-fg: rgba(255, 255, 255, 0.55);
+  --sidebar-new-workspace-fg: rgba(255, 255, 255, 0.28);
+  --sidebar-new-workspace-hover-fg: rgba(255, 255, 255, 0.55);
+  --sidebar-profile-name: rgba(255, 255, 255, 0.75);
+  --sidebar-profile-role: rgba(255, 255, 255, 0.3);
+  --sidebar-help-fg: rgba(255, 255, 255, 0.25);
+  --sidebar-help-hover-fg: rgba(255, 255, 255, 0.4);
+  --sidebar-item-hover: rgba(255, 255, 255, 0.04);
+  --sidebar-item-active: rgba(255, 255, 255, 0.07);
+  --sidebar-upload-color: #a195ff;
+  
+  --chat-header-border: rgba(255, 255, 255, 0.05);
+  --chat-header-title: rgba(255, 255, 255, 0.85);
+  --chat-header-file-icon: rgba(255, 255, 255, 0.3);
+  --chat-header-breadcrumb: rgba(255, 255, 255, 0.28);
+  --chat-header-breadcrumb-id: rgba(255, 255, 255, 0.2);
+  --chat-header-api-ready-bg: rgba(74, 222, 128, 0.08);
+  --chat-header-api-ready-border: rgba(74, 222, 128, 0.2);
+  --chat-header-api-ready-fg: rgba(74, 222, 128, 0.8);
+  --chat-header-latency: rgba(255, 255, 255, 0.3);
+  --chat-header-divider: rgba(255, 255, 255, 0.06);
+  --chat-header-icon: rgba(255, 255, 255, 0.25);
+  --chat-header-icon-hover: rgba(255, 255, 255, 0.65);
+  --chat-header-icon-delete-hover: rgba(239, 68, 68, 0.6);
+  --chat-header-pill-ready-bg: rgba(34, 197, 94, 0.12);
+  --chat-header-pill-ready-color: #4ade80;
+  --chat-header-pill-neutral-bg: rgba(255, 255, 255, 0.06);
+  --chat-header-pill-neutral-color: #a1a1aa;
+  
+  --right-panel-border: rgba(255, 255, 255, 0.05);
+  --right-panel-top-accent: rgba(255, 255, 255, 0.06);
+  --intel-metric-label-color: rgba(255, 255, 255, 0.35);
+  --intel-metric-row-divider: rgba(255, 255, 255, 0.05);
+  --intel-metric-inline-divider: rgba(255, 255, 255, 0.08);
+  --intel-metric-meter-track: rgba(255, 255, 255, 0.06);
+  --intel-metric-accent-bar: #4ade80;
+  --intel-metric-live-dot: #4ade80;
+  --intel-metric-live-dot-glow: rgba(74, 222, 128, 0.4);
+  --intel-latency-value-color: rgba(255, 255, 255, 0.82);
+  --intel-config-value-color: #a195ff;
+  --intel-stack-section-label: rgba(255, 255, 255, 0.22);
+  --intel-metric-pair-label-color: rgba(255, 255, 255, 0.28);
+  --intel-metric-pair-divider: rgba(255, 255, 255, 0.06);
+  --intel-latency-unit-color: rgba(255, 255, 255, 0.35);
+  --intel-confidence-accent-bar: #4ade80;
+  --intel-confidence-value-color: rgba(255, 255, 255, 0.9);
+  --intel-confidence-meter-fill: rgba(74, 222, 128, 0.5);
+  --intel-stack-row-label: rgba(255, 255, 255, 0.4);
+  --intel-stack-row-border: rgba(255, 255, 255, 0.04);
+  --intel-stack-row-hover-bg: rgba(255, 255, 255, 0.03);
+  --intel-stack-accent-vector: #60a5fa;
+  --intel-stack-accent-llm: #a78bfa;
+  --intel-stack-accent-provider: #fbbf24;
+  --intel-stack-accent-embedding: #2dd4bf;
+  --intel-doc-pdf-icon: #f87171;
+  --intel-doc-meta-color: rgba(255, 255, 255, 0.35);
+  --intel-doc-ready-dot: #4ade80;
+  --intel-evidence-accent-bar: rgba(255, 255, 255, 0.12);
+  --intel-evidence-row-divider: rgba(255, 255, 255, 0.04);
+  --intel-evidence-badge-bg: rgba(255, 255, 255, 0.05);
+  --intel-evidence-badge-fg: rgba(255, 255, 255, 0.45);
+  --intel-evidence-page-fg: rgba(255, 255, 255, 0.4);
+  --intel-evidence-hover-bg: rgba(255, 255, 255, 0.03);
+  
+  --intel-metrics-section-bg: var(--color-bg-elevated);
+  --intel-metrics-section-border: var(--color-border-subtle);
+  --intel-metric-card-bg: var(--color-bg-card);
+  --intel-metric-card-bg-hover: var(--color-bg-elevated);
+  --intel-metric-card-border: var(--color-border-subtle);
+  --intel-metric-card-border-hover: var(--color-border-strong);
+  --intel-metric-label: var(--color-text-muted);
+  --intel-metric-value: var(--color-text-primary);
+  --intel-metric-unit: var(--color-text-muted);
+  --intel-metric-unit-divider: var(--color-border);
+  --intel-metric-divider: var(--color-border);
+  --intel-metric-icon: var(--color-text-muted);
+  --intel-metric-icon-bg: var(--color-bg-elevated);
+  --intel-metric-icon-border: var(--color-border-subtle);
+  --intel-metric-inner-highlight: none;
+  --intel-metric-accent-neutral: var(--color-border-strong);
+  --intel-metric-accent-success: var(--color-success);
+  --intel-metric-accent-warning: var(--color-warning);
+  --intel-metric-accent-medium: var(--color-warning);
+  --intel-metric-accent-low: var(--color-danger);
+  --intel-metric-success-bg: var(--color-success-bg);
+  --intel-metric-success-border: rgba(74, 222, 128, 0.18);
+  --intel-metric-warning-bg: var(--color-warning-bg);
+  --intel-metric-warning-border: rgba(251, 191, 36, 0.18);
+  --intel-metric-low-border: rgba(248, 113, 113, 0.18);
+  --intel-metric-pill-bg: var(--color-bg-elevated);
+  --intel-metric-pill-border: var(--color-border-subtle);
+}

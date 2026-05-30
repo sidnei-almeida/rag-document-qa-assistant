@@ -1,0 +1,76 @@
+/**
+ * Avatar do modelo — imagem sempre na frente (sem mix-blend).
+ * O recorte circular (overflow + border-radius) esconde os cantos pretos das PNGs.
+ */
+.model-avatar {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: 50%;
+  overflow: hidden;
+  background: var(--avatar-bg);
+}
+
+.model-avatar--sm {
+  width: 40px;
+  height: 40px;
+}
+
+.model-avatar--chat {
+  width: 40px;
+  height: 40px;
+}
+
+.model-avatar--md {
+  width: 48px;
+  height: 48px;
+}
+
+.model-avatar--lg {
+  width: 56px;
+  height: 56px;
+}
+
+.model-avatar__img {
+  position: relative;
+  z-index: 2;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 12%;
+  mix-blend-mode: normal;
+  pointer-events: none;
+  user-select: none;
+}
+
+.assistant-avatar.model-avatar {
+  z-index: 2;
+  flex-shrink: 0;
+  align-self: flex-start;
+  margin-top: 0.125rem;
+  border: var(--border-card);
+}
+
+.assistant-avatar.model-avatar .model-avatar__img {
+  z-index: 3;
+}
+
+.sidebar__avatar.model-avatar {
+  z-index: 1;
+  flex-shrink: 0;
+}
+
+.sidebar__avatar.model-avatar .model-avatar__img {
+  z-index: 2;
+}
+
+@media (min-width: 768px) {
+  .model-avatar--chat {
+    width: 44px;
+    height: 44px;
+  }
+}

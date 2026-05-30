@@ -1,0 +1,235 @@
+/**
+ * Workspace Intelligence metrics — stacked hierarchy, no cards
+ */
+
+.intel-metrics {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  border: none;
+}
+
+.intel-metrics__row {
+  padding: 14px 0;
+  border-bottom: 1px solid var(--intel-metric-row-divider);
+}
+
+.intel-metrics__row:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.intel-metrics__row:first-child {
+  padding-top: 0;
+}
+
+/* Shared label */
+.intel-metric__label {
+  display: block;
+  font-size: 9px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--intel-metric-label-color);
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+
+/* —— Docs + Chunks (inline pair) —— */
+.intel-metrics__row--pair {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.intel-metrics__row--pair .intel-metric__label {
+  margin-bottom: 2px;
+  letter-spacing: 0.1em;
+  color: var(--intel-metric-pair-label-color);
+}
+
+.intel-inline-stat {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.intel-inline-stat__value {
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  font-variant-numeric: tabular-nums;
+  color: var(--color-text-primary);
+  transition: font-weight 0.15s ease;
+}
+
+.intel-metrics__row--pair:hover .intel-inline-stat__value {
+  font-weight: 400;
+}
+
+.intel-metrics__vdivider {
+  flex-shrink: 0;
+  width: 1px;
+  height: 28px;
+  align-self: center;
+  margin: 0 16px;
+  background: var(--intel-metric-pair-divider);
+}
+
+/* —— Latency —— */
+.intel-metrics__row--latency .intel-metric__label {
+  margin-bottom: 6px;
+}
+
+.intel-latency {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 40px;
+}
+
+.intel-latency__pulse {
+  flex-shrink: 0;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--intel-metric-live-dot);
+  opacity: 0.8;
+  transform-origin: center;
+  animation: intelLivePulse 1.8s ease-out infinite;
+}
+
+.intel-latency__value {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  margin: 0;
+  line-height: 1;
+}
+
+.intel-latency__number {
+  font-size: 36px;
+  font-weight: 200;
+  letter-spacing: -0.03em;
+  font-variant-numeric: tabular-nums;
+  color: var(--intel-latency-value-color, var(--color-text-primary));
+}
+
+.intel-metrics__row--latency.intel-metrics__row--tone-warning .intel-latency__number {
+  color: var(--intel-latency-value-color, var(--color-text-primary));
+}
+
+.intel-latency__unit {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1;
+  color: var(--intel-latency-unit-color);
+  margin-left: 3px;
+  vertical-align: middle;
+}
+
+.intel-latency__empty {
+  font-size: 36px;
+  font-weight: 200;
+  color: var(--color-text-muted);
+  line-height: 1;
+}
+
+/* —— Confidence —— */
+.intel-metrics__row--confidence .intel-metric__label {
+  margin-bottom: 8px;
+}
+
+.intel-confidence {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.intel-confidence__main {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 0;
+}
+
+.intel-confidence__accent {
+  flex-shrink: 0;
+  width: 2px;
+  height: 1.125em;
+  border-radius: 1px;
+  background: var(--intel-confidence-accent-bar);
+  opacity: 0.7;
+  align-self: center;
+}
+
+.intel-confidence__value {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  color: var(--intel-confidence-value-color);
+}
+
+.intel-confidence__value--empty {
+  color: var(--color-text-muted);
+  font-weight: 300;
+}
+
+.intel-metrics__row--tone-medium .intel-confidence__value {
+  color: var(--color-warning);
+}
+
+.intel-metrics__row--tone-medium .intel-confidence__accent {
+  background: var(--color-warning);
+}
+
+.intel-metrics__row--tone-medium .intel-confidence__meter-fill {
+  background: var(--color-warning);
+  opacity: 0.55;
+}
+
+.intel-metrics__row--tone-low .intel-confidence__value {
+  color: var(--color-danger);
+}
+
+.intel-metrics__row--tone-low .intel-confidence__accent {
+  background: var(--color-danger);
+}
+
+.intel-metrics__row--tone-low .intel-confidence__meter-fill {
+  background: var(--color-danger);
+  opacity: 0.55;
+}
+
+.intel-confidence__meter {
+  width: 100%;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--intel-metric-meter-track);
+  overflow: hidden;
+}
+
+.intel-confidence__meter-fill {
+  height: 100%;
+  border-radius: 0;
+  background: var(--intel-confidence-meter-fill);
+  will-change: width;
+}
+
+@keyframes intelLivePulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+}

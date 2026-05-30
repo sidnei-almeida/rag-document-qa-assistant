@@ -1,0 +1,138 @@
+/**
+ * DocMind — polimento final: estados, focus, consistência visual
+ */
+
+/* —— Focus visible (acessibilidade) —— */
+:focus {
+  outline: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-focus-outline);
+  outline-offset: 2px;
+}
+
+.btn:focus-visible,
+.icon-btn:focus-visible,
+.upload-hero__btn:focus-visible,
+.sidebar__new-workspace:focus-visible,
+.workspace-item__main:focus-visible,
+.feedback-btn:focus-visible,
+.evidence-chip:focus-visible,
+.suggested-prompts__card:focus-visible,
+.sidebar__help:focus-visible {
+  outline: 2px solid var(--color-focus-outline);
+  outline-offset: 2px;
+}
+
+.message-composer__input:focus-visible {
+  outline: none;
+}
+
+/* —— Disabled —— */
+.btn:disabled,
+.icon-btn:disabled,
+.sidebar__upload-btn:disabled,
+.sidebar__new-workspace:disabled,
+.workspace-item__main--disabled {
+  opacity: var(--color-disabled-opacity);
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.message-composer__input:disabled {
+  opacity: var(--color-disabled-opacity);
+  cursor: not-allowed;
+}
+
+/* —— Loading —— */
+.btn--primary:disabled,
+.message-composer__send--loading {
+  opacity: 0.85;
+  cursor: wait;
+}
+
+.message-composer__spinner,
+.upload-dropzone__spinner,
+.upload-hero__spinner {
+  color: rgba(255, 255, 255, 0.2);
+}
+
+/* —— App shell —— */
+.app-shell {
+  background: var(--color-bg-base);
+}
+
+.app-shell__main {
+  background: var(--color-bg-main);
+}
+
+.upload-dropzone:hover:not(.upload-dropzone--disabled) {
+  border-color: var(--color-border-strong);
+  background: var(--color-bg-elevated);
+}
+
+.upload-dropzone--dragover {
+  border-color: var(--color-accent);
+  background: var(--color-bg-elevated);
+}
+
+.app-banner--info {
+  background: var(--color-bg-elevated);
+  color: var(--color-text-secondary);
+  border-bottom-color: var(--color-border);
+}
+
+.workspace-item__main:focus-visible {
+  outline-offset: 1px;
+}
+
+.workspace-item__status.badge {
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+.workspace-item__status.badge--ready {
+  color: var(--color-success);
+}
+
+.workspace-item__status.badge--processing {
+  color: var(--color-warning);
+}
+
+.workspace-item__status.badge--error {
+  color: var(--color-danger);
+}
+
+/* —— Chat header —— */
+.feedback-btn:focus-visible {
+  opacity: 1;
+  outline-offset: 1px;
+}
+
+/* Composer */
+/* Badges — legíveis em ambos os temas */
+.badge--indexed {
+  color: var(--color-text-secondary);
+  background: var(--color-bg-overlay);
+  border: var(--border-card);
+}
+
+.badge--semantic {
+  color: var(--color-accent);
+  background: var(--color-accent-subtle);
+}
+
+/* Suggested prompts */
+.suggested-prompts__card {
+  background: var(--color-bg-card);
+  border: var(--border-card);
+}
+
+.suggested-prompts__card:hover:not(:disabled) {
+  background: var(--color-bg-elevated);
+  border-color: var(--color-border-strong);
+  color: var(--color-text-primary);
+}
+

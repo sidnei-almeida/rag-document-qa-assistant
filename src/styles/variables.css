@@ -1,0 +1,76 @@
+/**
+ * Layout, typography, radii, spacing (aliases → tokens.css)
+ */
+
+:root {
+  --bg-main: var(--color-bg-base);
+  --bg-panel: var(--color-bg-surface);
+  --bg-panel-soft: var(--color-bg-card);
+  --bg-elevated: var(--color-bg-elevated);
+  --bg-hover: var(--color-bg-overlay);
+
+  --text-primary: var(--color-text-primary);
+  --text-secondary: var(--color-text-secondary);
+  --text-muted: var(--color-text-muted);
+
+  --border-subtle: var(--color-border);
+  --border-soft: var(--color-border-strong);
+
+  --accent-blue: var(--color-accent);
+  --accent-teal: var(--color-accent-muted);
+  --accent-green: var(--color-success);
+  --accent-purple: var(--color-accent);
+  --accent-red: var(--color-danger);
+  --accent-amber: var(--color-warning);
+
+  --topbar-bg: var(--color-topbar);
+  --composer-bg: var(--color-composer);
+  --composer-field-bg: var(--color-bg-input);
+  --composer-field-focus-bg: var(--color-bg-input);
+  --btn-on-accent-fg: var(--color-on-accent);
+  --dialog-backdrop: var(--color-dialog-backdrop);
+
+  --shadow-soft: none;
+
+  /* Radii: cards 12px · inputs/buttons 8px · badges/chips 6px */
+  --radius-card: 12px;
+  --radius-md: 12px;
+  --radius-sm: 8px;
+  --radius-xs: 6px;
+  --radius-lg: 12px;
+  --radius-xl: 12px;
+
+  --sidebar-width: 220px;
+  --right-panel-width: 280px;
+  --top-bar-height: 56px;
+
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+
+  /* Spacing scale (+25% breathing room) */
+  --space-scale: 1.25;
+  --space-1: calc(0.25rem * var(--space-scale));
+  --space-2: calc(0.5rem * var(--space-scale));
+  --space-3: calc(0.75rem * var(--space-scale));
+  --space-4: calc(1rem * var(--space-scale));
+  --space-5: calc(1.25rem * var(--space-scale));
+  --space-6: calc(1.5rem * var(--space-scale));
+  --space-8: calc(2rem * var(--space-scale));
+
+  --transition: all 0.15s ease;
+  --transition-interactive: all 0.15s ease;
+  --transition-theme: background-color 0.15s ease, color 0.15s ease,
+    border-color 0.15s ease, opacity 0.15s ease;
+
+  --border-width: 1px;
+  --border-card: var(--border-width) solid var(--color-border-subtle);
+
+  /* Intelligence metric layout tokens */
+  --intel-metric-padding-x: var(--space-3);
+  --intel-metric-padding-y: var(--space-3);
+  --intel-metric-radius: var(--radius-card);
+  --intel-metric-value-size: 1.8125rem;
+}
