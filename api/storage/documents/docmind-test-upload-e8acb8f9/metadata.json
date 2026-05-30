@@ -1,0 +1,17 @@
+{
+  "document_id": "docmind-test-upload-e8acb8f9",
+  "filename": "docmind-test-upload.pdf",
+  "original_filename": "docmind-test-upload.pdf",
+  "file_path": "/home/a1rm4x/Documents/GitHub/rag-document-qa-assistant/api/storage/documents/docmind-test-upload-e8acb8f9/source.pdf",
+  "status": "ready",
+  "index_path": "/home/a1rm4x/Documents/GitHub/rag-document-qa-assistant/api/storage/documents/docmind-test-upload-e8acb8f9/faiss_index",
+  "file_hash": "e8acb8f91756842adfe02c4a2e4a5be7398ca2dad4d58d7f2b115f0424ed5bb7",
+  "is_default": false,
+  "source": "upload",
+  "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "index_ready": true,
+  "created_at": "2026-05-30T09:23:36.779635+00:00",
+  "updated_at": "2026-05-30T09:23:40.388932+00:00",
+  "pages": 1,
+  "chunks": 1
+}

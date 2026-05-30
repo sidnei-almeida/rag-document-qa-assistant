@@ -18,7 +18,6 @@ logs/
 npm-debug.log*
 yarn-debug.log*
 pnpm-debug.log*
-lerna-debug.log*
 
 # OS
 .DS_Store
@@ -34,29 +33,7 @@ Thumbs.db
 *.sln
 *.sw?
 
-# Python — backend (HF Space / local api)
-__pycache__/
-*.py[cod]
-*$py.class
-*.so
-.Python
-.venv/
-venv/
-env/
-api/.venv/
-*.egg-info/
-.pytest_cache/
-.mypy_cache/
-.ruff_cache/
-htmlcov/
-.coverage
-
-# RAG storage — indexes & uploads (never commit)
-api/storage/
-
-# Optional local / legacy
+# Legacy prototypes (local only)
 old-docmind-chat/
 docmind-chat/
-
-# README template (local reference only)
 readme_model.md

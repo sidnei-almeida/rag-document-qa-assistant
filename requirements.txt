@@ -1,2 +1,0 @@
-# Hugging Face Spaces — install from repo root
--r api/requirements.txt

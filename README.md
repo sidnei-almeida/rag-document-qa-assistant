@@ -36,7 +36,7 @@ A **production-grade React dashboard** for multi-document RAG over PDF workspace
 
 The UI does **not** run embeddings or LLM inference locally. Every upload, health check, and question flows through the **Hugging Face Space API** (FastAPI + FAISS + Groq) — this repository is the frontend shell and analyst experience.
 
-> **Production API:** `https://salmeida-my-rag-chatbot.hf.space` — see [`api/README.md`](./api/README.md) for the full backend contract, storage layout, and local FastAPI setup.
+> **Production API:** `https://salmeida-my-rag-chatbot.hf.space` — backend hosted separately on Hugging Face Spaces (not in this repo).
 
 ---
 
@@ -171,14 +171,6 @@ VITE_APP_NAME=DocMind
 | `VITE_API_URL` | Hugging Face Space base URL (no trailing slash). Default in code: `https://salmeida-my-rag-chatbot.hf.space` |
 | `VITE_APP_NAME` | Display name shown in UI contexts (default: `DocMind`) |
 
-**Optional — local mock API** (`npm run dev:all`):
-
-```env
-VITE_API_URL=/api
-VITE_API_PROXY_TARGET=http://localhost:3001
-PORT=3001
-```
-
 ---
 
 ## Quick start
@@ -203,7 +195,6 @@ Open [http://localhost:5173](http://localhost:5173).
 npm run build          # production bundle → dist/
 npm run preview        # serve dist locally
 npm run lint           # ESLint on src/
-npm run dev:all        # Vite + Node mock API (optional)
 npm run generate:favicons   # regenerate PNG favicons from public/favicon.svg
 ```
 
@@ -242,12 +233,9 @@ rag-document-qa-assistant/
 │   ├── hooks/                   # useApiStatus, useWorkspaces, useChat
 │   ├── lib/                     # api.ts, env.ts, types, storage
 │   └── styles/                  # tokens, layout, chat, sidebar, right-panel
-├── api/                         # FastAPI backend (HF Space source)
-├── server/                      # Optional Node mock for local dev
 ├── scripts/
 │   └── generate-favicons.mjs
-├── readme_model.md              # README style reference
-├── vercel.json                  # Security headers
+├── vercel.json                  # Vite build + security headers
 ├── .env.example
 └── vite.config.js
 ```
@@ -264,18 +252,16 @@ rag-document-qa-assistant/
 | Q&A | `POST /ask` (workspace-scoped question) |
 | Cleanup | `DELETE /workspaces/{id}`, document delete, `DELETE /clear` |
 
-Full backend documentation: [`api/README.md`](./api/README.md).
+Backend runs on the Hugging Face Space — not in this repository.
 
 ---
 
-## Related components
+## Related
 
 | Component | Role |
 |-----------|------|
-| [`api/`](./api/) | FastAPI RAG backend — FAISS, Groq, document registry |
-| **HF Space** | Hosted production API at `salmeida-my-rag-chatbot.hf.space` |
-| **This repo** | React frontend — workspace UX, chat, intelligence panel |
-| [`docmind-chat/`](./docmind-chat/) | Legacy single-page HTML prototype |
+| **HF Space** | Production API at `salmeida-my-rag-chatbot.hf.space` |
+| **This repo** | React frontend only — workspace UX, chat, intelligence panel |
 
 ---
 

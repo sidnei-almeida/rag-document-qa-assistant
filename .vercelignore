@@ -1,23 +1,7 @@
-# Backend — runs on Hugging Face Space, not Vercel
-api/
-app.py
-requirements.txt
-server/
-
-# Python artifacts
-__pycache__/
-*.py[cod]
-.venv/
-venv/
-api/storage/
-
-# Dev / legacy
-old-docmind-chat/
-docmind-chat/
-readme_model.md
 node_modules/
-
-# Secrets
 .env
 .env.local
 .env.*
+readme_model.md
+old-docmind-chat/
+docmind-chat/

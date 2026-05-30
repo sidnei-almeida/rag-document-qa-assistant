@@ -1,0 +1,17 @@
+{
+  "updated_at": "2026-05-30T09:23:40.389353+00:00",
+  "document_count": 1,
+  "default_document_id": "docmind-test-upload-e8acb8f9",
+  "documents": [
+    {
+      "document_id": "docmind-test-upload-e8acb8f9",
+      "filename": "docmind-test-upload.pdf",
+      "pages": 1,
+      "chunks": 1,
+      "status": "ready",
+      "index_ready": true,
+      "source": "upload",
+      "created_at": "2026-05-30T09:23:36.779635+00:00"
+    }
+  ]
+}

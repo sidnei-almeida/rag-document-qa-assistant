@@ -1,0 +1,10 @@
+[
+  {
+    "chunk_id": "chunk-000",
+    "document_id": "docmind-test-upload-e8acb8f9",
+    "filename": "docmind-test-upload.pdf",
+    "page": 0,
+    "page_index": 0,
+    "text": "DocMind upload test. This document describes a fictional RAG pipeline for PDF question answering."
+  }
+]

@@ -1,1 +1,0 @@
-# DocMind API package
