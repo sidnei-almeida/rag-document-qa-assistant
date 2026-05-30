@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import darkProfile from '../../../images/dark_profile.png';
+import modelProfile from '../../../images/novo.png';
 
 const SIZE_CLASS = {
   sm: 'model-avatar--sm',
@@ -22,7 +22,14 @@ export default function ModelAvatar({
       style={size != null ? { width: size, height: size } : undefined}
       aria-hidden={alt ? undefined : true}
     >
-      <img src={darkProfile} alt={alt} className="model-avatar__img" draggable={false} />
+      <img
+        src={modelProfile}
+        alt={alt}
+        className="model-avatar__img"
+        draggable={false}
+        width={size ?? undefined}
+        height={size ?? undefined}
+      />
     </span>
   );
 }

@@ -9,7 +9,7 @@ import { formatMessageTime } from '../../utils/formatters';
 function AssistantAvatar() {
   return (
     <ModelAvatar
-      size={32}
+      size={57}
       className="chat-message__avatar-assistant assistant-avatar"
       alt=""
     />

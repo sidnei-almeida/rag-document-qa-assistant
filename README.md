@@ -232,7 +232,7 @@ rag-document-qa-assistant/
 │   ├── apple-touch-icon.png
 │   └── site.webmanifest
 ├── images/
-│   └── dark_profile.png         # DocMind assistant avatar
+│   └── novo.png                 # DocMind assistant avatar
 ├── src/
 │   ├── components/
 │   │   ├── chat/                # ChatPanel, ChatMessage, UploadHero, composer

@@ -1,4 +1,4 @@
-/** Identidade exibida na thread do chat (avatar via ModelAvatar / dark_profile.png). */
+/** Identidade exibida na thread do chat (avatar via ModelAvatar / novo.png). */
 
 export const ASSISTANT_DISPLAY_NAME = 'DocMind';
 

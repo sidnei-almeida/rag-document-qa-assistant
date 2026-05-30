@@ -74,7 +74,7 @@
 .assistant-message-row {
   display: flex;
   align-items: flex-start;
-  gap: 12px;
+  gap: 21px;
   width: 100%;
   max-width: 680px;
 }
@@ -101,19 +101,20 @@
   gap: 0;
 }
 
-/* Assistant avatar — mesma foto da sidebar (ModelAvatar / dark_profile.png) */
+/* Assistant avatar — mesma foto da sidebar (ModelAvatar / novo.png) */
 .chat-message__avatar-assistant.model-avatar {
   flex-shrink: 0;
-  width: 32px;
-  height: 32px;
+  width: 57px;
+  height: 57px;
+  border-radius: 50%;
   border: var(--chat-avatar-ring);
   box-sizing: border-box;
 }
 
 .chat-message__avatar-spacer {
   flex-shrink: 0;
-  width: 32px;
-  height: 32px;
+  width: 57px;
+  height: 57px;
 }
 
 .chat-message__avatar-fallback-letter {
@@ -125,11 +126,11 @@
 }
 
 .chat-message__assistant-name {
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 500;
   line-height: 1.2;
   letter-spacing: 0.01em;
-  color: var(--chat-assistant-name-color);
+  color: rgba(255, 255, 255, 0.4);
   user-select: none;
 }
 

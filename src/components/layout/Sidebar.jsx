@@ -157,7 +157,7 @@ export default function Sidebar({
 
       <div className="sidebar__footer">
         <div className="sidebar__profile">
-          <ModelAvatar size={26} className="sidebar__avatar" alt="DocMind" />
+          <ModelAvatar size={45} className="sidebar__avatar" alt="DocMind" />
           <div className="sidebar__profile-info">
             <span className="sidebar__profile-name">DocMind</span>
             <span className="sidebar__profile-role">Live HF Space</span>
