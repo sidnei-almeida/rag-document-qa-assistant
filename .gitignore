@@ -33,3 +33,4 @@ dist-ssr
 
 # Python API storage (indexed documents)
 api/storage/
+readme_model.md
